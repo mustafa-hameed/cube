@@ -3,6 +3,7 @@ import 'package:cube/homepage.dart';
 import 'package:cube/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 class MobileApp extends StatefulWidget {
   const MobileApp({Key? key}) : super(key: key);
 
@@ -43,10 +44,16 @@ class _MobileAppState extends State<MobileApp> {
             height: 200,
             minWidth: double.infinity,
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=> MyHomePage()));
+              //Navigator.of(context).push(MaterialPageRoute(builder: (context)=> MyHomePage()));
+              Get.to(MyHomePage());
 
             },
-            child: Text(''),
+            child: Text('',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.white,
+                fontWeight: FontWeight.bold
+            ),),
           ),
     ),
           Container(
